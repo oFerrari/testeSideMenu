@@ -1,0 +1,52 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Cadastro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Nome</ion-label>
+      <ion-input placeholder="Nome:" type="number"></ion-input>   <!-- Type -->
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input placeholder="Nome:" type="email" required></ion-input>   <!-- Type -->
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Genero</ion-label>
+      <ion-select multiple="true" cancelText="Cancelar" okText="Confirmar">
+        <ion-select-option>Masculino</ion-select-option>
+        <ion-select-option>Feminino</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Receber Informações?</ion-label>
+      <ion-toggle></ion-toggle>
+    </ion-item>
+
+    <!--Checkboxes-->
+
+    <ion-item>
+      <ion-list-header>Interesses</ion-list-header>
+    </ion-item>
+
+    <ion-item>
+      <ion-list-header>BackEnd</ion-list-header>
+      <ion-checkbox></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-list-header>Front End</ion-list-header>
+      <ion-checkbox slot="end" color="danger"></ion-checkbox>      <!--Slot-->
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="block" (click)="presentToast('top')">Present Toast At the Top</ion-button>
+
+</ion-content>
