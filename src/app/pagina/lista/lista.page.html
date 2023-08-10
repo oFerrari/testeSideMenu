@@ -8,15 +8,38 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-list>
+  <ion-list *ngFor="let e of elenco">
     <ion-item>
-      <ion-label>Marcos Rogerio</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-label>Julia Regina</ion-label>
-    </ion-item>
-  </ion-list>
+      <ion-label>{{e.nome}}</ion-label>
+      <ion-avatar slot="start">
+      <ion-img src="{{e.avatar}}"></ion-img>
+    </ion-avatar>
+    <ion-badge slot="end" color="danger">{{e.curtidas}}</ion-badge>
+  </ion-item>
 
-  <ion-img src="{img1}"></ion-img>
-  <ion-img src="https://images.unsplash.com/photo-1592564630984-7410f94db184?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1146&q=80"></ion-img>
+   <!--  <ion-item>
+      <ion-label>{{nomeAtor2}}</ion-label>
+      <ion-avatar>
+        <ion-img [src]="avatarAtor2"></ion-img>
+      </ion-avatar>
+    </ion-item>   -->
+
+  </ion-list> 
+  <br><br>
+
+  <ion-card>
+    <ion-img src="{{avatarCard}}" alt="Dona Chica"></ion-img>
+      <ion-card-header>
+        <ion-card-title>"{{nomeCard}}"</ion-card-title>
+        <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae impedit, accusamus
+           voluptates unde ut id vitae rerum cupiditate animi nesciunt et delectus dicta quam fugit nam quos obcaecati mollitia cumque.
+      </ion-card-content>
+    
+</ion-card>
+
+  
+  
 </ion-content>
