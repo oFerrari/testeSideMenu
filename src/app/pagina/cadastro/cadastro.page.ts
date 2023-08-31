@@ -8,11 +8,15 @@ import { ToastController } from '@ionic/angular';
 })
 export class CadastroPage implements OnInit {
 
+  public pessoa = {
+    nome: ""
+  }
+
   constructor(private toast: ToastController) { }
 
   async presentToast(position: 'top' | 'middle' | 'bottom') {
     const toast = await this.toast.create({
-      message: 'Cuidado Voce nao pode apertar ai',
+      message: 'Cuidado Voce nao pode apertar ai'+ this.pessoa.nome,
       duration: 1500,   /*milissegundos*/
       position: position,
     });
@@ -21,6 +25,7 @@ export class CadastroPage implements OnInit {
   }
 
   ngOnInit() {
+    
   }
 
 }
